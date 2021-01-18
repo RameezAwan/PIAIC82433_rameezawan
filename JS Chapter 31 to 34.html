@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">  
+
+  function fn1() 
+	{
+		var name = prompt("Enter Your Name");
+		var date = parseInt(prompt("Enter Your Birthday Date"));
+		var month = parseInt(prompt("Enter Your Birthday Month in digits i.e 01,02,03"));
+		var year = parseInt(prompt("Enter Your Birthday Year"));
+	
+		var date1 = new Date(year,month-1,date);
+		//alert(date1);
+	
+//Keep string's first word letter capital
+	
+		var arr=name.toLowerCase().split(" ");
+		var result = arr.map(function(val){return val.replace(val.charAt(0), val.charAt(0).toUpperCase());});
+		var nameresult = result.join(" ");
+		//alert(nameresult);
+		
+//Calculating age in years,months,days,hours,minutes, and seconds
+	
+		var birth_date = new Date(year,month,date);
+		//var years,months,days, hours, minutes, seconds;
+		var current_date = new Date();
+		var YearDiff =  (current_date.getYear() - birth_date.getYear());
+		var monthDiff = (current_date.getMonth() - birth_date.getMonth());
+		var daysDiff = (current_date.getDate() - birth_date.getDate());
+		var hoursDiff = (current_date.getHours() - birth_date.getHours());
+		var minDiff = (current_date.getMinutes() - birth_date.getMinutes());
+		var secDiff = (current_date.getSeconds() - birth_date.getSeconds());
+		var th_birthday = current_date.getFullYear() - birth_date.getFullYear();
+		var one_day= 1000*60*60*24;
+		var ageindays = Math.round((current_date - birth_date)/one_day);
+		
+		
+
+//Calculating how many days left in upcoming birthday
+
+		var bday=new Date(current_date.getFullYear(), month-1, date);
+		if (current_date.getMonth()==month-1 && current_date.getDate()>date) 
+		{
+		bday.setFullYear(bday.getFullYear()+1); 
+		}  
+		var result = Math.ceil((bday.getTime()-current_date.getTime())/(one_day));
+		var r_hour = result*24;
+		var r_mints = r_hour*60;
+		var r_sec = r_mints*60;
+			
+//Displaying result through Console.log
+		
+		console.log("Hello "+nameresult+", Good Morning, AfterNoon, Evening");
+		console.log("Your DOB is " + date1);
+		console.log("You are "+YearDiff+' Years '+monthDiff+' Months '+daysDiff+' Days '+hoursDiff+' Hours '+minDiff+' Minutes '+secDiff+' Seconds' + "old");
+		console.log("Your Age in Days "+ageindays); 
+		console.log("How much time left in your next birthday ? "+ result + " days "+r_hour+" hours "+r_mints+" minutes "+r_sec+" seconds ");
+		console.log("happy Birth Day " + name + " Today is Your "+ th_birthday +"th Birthday");
+		
+	
+	}
+	
+</script>
+
+<form>
+
+		<h1>JS chapter 31 to 34</h1>
+		<h2>Assignment PIAIC</h2>
+		<h3>Calculate DOB in years,days,months,minutes and seconds </h3><br>
+		<p>Click submit button to start and see results in console</p>
+		<button onclick="fn1()">Submit</button>
+</form>
+	<br> 
+
+</body>
+</html>

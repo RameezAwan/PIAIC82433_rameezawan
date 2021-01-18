@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JS chapter 18 19 20</h1>
+<h2>Assignment PIAIC</h2>
+<h3>Customize previous assignment "ch_15_16_17" with for loop </h3><br>
+
+<p>Click the button below to add your courses .</p>
+
+<button onclick="myCourses()">add courses</button>
+
+<p id="main"></p>
+
+<script>
+function myCourses() {
+
+
+	var courses = [];
+	var course1;
+	var sub1;
+	
+	for(i=0; i<=4; i++)
+	{
+	course1 = prompt("Course"+i, "Computer");
+	courses.push(course1);
+	}
+	alert(courses);
+		
+	for(j=0; j<=4; j++)
+	{
+	sub1 = prompt("Your course" + j + "name is ", courses[j]);
+	courses.splice(j,j, sub1);
+	}
+	alert(courses);
+	
+}
+</script>
+
+</body>
+</html>

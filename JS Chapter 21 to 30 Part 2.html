@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">  
+
+  function fn1() 
+	{
+		var x = document.getElementById("str").value;
+		
+		var arr=x.toLowerCase().split(" ");
+		
+		var result = arr.map(function(val)
+		{
+		return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+		});
+			
+		var y = result.join(" ");
+			
+		console.log(y);
+	}
+	
+</script>
+
+<form>
+	<h1>JS chapter 21 to 30</h1>
+	<h2>Assignment PIAIC</h2>
+	<h3>Second Assignment Print Value in Console.log() </h3><br>
+	
+	
+	<input type="text" id="str" placeholder="Insert Your String Here"><br>
+	<br>
+	<button onclick="fn1()">Submit</button>
+</form>
+	<br> 
+
+</body>
+</html>

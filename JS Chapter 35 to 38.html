@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">  
+
+  function main() 
+	{
+		var user_input = document.getElementById("str").value;
+		var user_number = document.getElementById("numbr").value;		
+		
+		var concat = converstion(user_input);
+		var fact = Factorial(user_number);
+		
+		console.log(concat);
+		console.log(fact);
+		
+		function converstion(sentn) 
+		{
+			var arr=sentn.toLowerCase().split(" ");
+			var result = arr.map(function(val)
+			{
+			return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+			}
+			);
+			var nameresult = result.join(" ");
+			return nameresult;
+		}
+		
+		function Factorial(n) 
+		{ 
+            var ans=1; 
+			
+            for (var i = 2; i <= n; i++) 
+            ans = ans * i; 
+            return ans; 
+        } 
+	}
+	
+</script>
+
+<form>
+	<h1>JS chapter 35 to 38</h1>
+	<h2>Assignment PIAIC</h2>
+	<h3>Factorialize & String First letter Capital</h3><br>
+	
+	<input type="text" id="str" placeholder="Insert Your String Here"><br>
+	<br>
+	<input type="text" id="numbr" placeholder="Insert Number for Factorialize"><br>
+	<br>
+	<button onclick="main()">Submit</button>
+</form>
+	<br> 
+
+</body>
+</html>
+

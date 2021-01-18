@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">  
+
+  function main() 
+	{
+		var num1=parseInt(document.getElementById("course1").value);
+		var num2=parseInt(document.getElementById("course2").value);
+		var num3=parseInt(document.getElementById("course3").value);
+		var num4=parseInt(document.getElementById("course4").value);
+		var num5=parseInt(document.getElementById("course5").value);
+		
+		var totalMarks = 500;
+		var obtainedMarks = num1+num2+num3+num4+num5;
+		
+		if(num1<=100&&num2<=100&&num3<=100&&num4<=100&&num5<=100)
+		{
+		
+		var percentage = obtainedMarks * 100/ totalMarks;
+
+		if(percentage >= 90) {
+			alert("Grade A+");}
+	
+		if(percentage<=89&&percentage>=75) {
+			alert("Grade A");}
+	
+		if(percentage<=74&&percentage>=60) {
+			alert("Grade B");}
+			
+		if(percentage<=60&&percentage>=45) {
+			alert("Grade C");}
+		
+		if(percentage<=44&&percentage>=30) {
+			alert("Grade D");}
+		
+		if(percentage<29) {
+			alert("Grade F");}
+		}
+		
+		else{
+		alert("Please insert valid numbers, each subject has 100 Marks");
+		}
+	}
+	
+</script>
+
+<form>
+	<h1>JS chapter 39 to 42</h1>
+	<h2>Assignment PIAIC</h2>
+	<h3>Percentage Calculator</h3><br>
+	
+	Enter Number of Course 1: <input type="text" id="course1" /><br/> 
+	<br> 
+	Enter Number of Course 2: <input type="text" id="course2" /><br/> 
+	<br>
+	Enter Number of Course 3: <input type="text" id="course3" /><br/> 
+	<br>
+	Enter Number of Course 4: <input type="text" id="course4" /><br/> 
+	<br>
+	Enter Number of Course 5: <input type="text" id="course5" /><br/> 
+	<br>
+	<button onclick="main()">Submit</button>
+</form>
+	<br> 
+
+</body>
+</html>
+

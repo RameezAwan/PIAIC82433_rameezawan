@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JS chapter 15 16 17</h1>
+<h2>Assignment PIAIC</h2>
+
+<p>Click the button below to add your courses .</p>
+
+<button onclick="myCourses()">add courses</button>
+
+<p id="main"></p>
+
+<script>
+function myCourses() {
+
+
+	var courses = [];
+	var course1 = prompt("Course 1", "Computer");
+	var course2 = prompt("Course 2", "Computer");
+	var course3 = prompt("Course 3", "Computer");
+	var course4 = prompt("Course 4", "Computer");
+	var course5 = prompt("Course 5", "Computer");
+  
+	courses.push(course1,course2,course3,course4,course5);
+	
+	alert(courses);
+	
+	var sub1 = prompt("Your course 1 name is ", course1);
+	var sub2 = prompt("Your course 2 name is ", course2);	
+	var sub3 = prompt("Your course 3 name is ", course3);
+	var sub4 = prompt("Your course 4 name is ", course4);
+	var sub5 = prompt("Your course 5 name is ", course5);
+  
+    courses.splice(0,0, sub1);
+	courses.splice(1,1, sub2);
+	courses.splice(2,2, sub3);
+	courses.splice(3,3, sub4);
+	courses.splice(4,4, sub5);
+	alert(courses);
+	
+	
+}
+</script>
+
+</body>
+</html>

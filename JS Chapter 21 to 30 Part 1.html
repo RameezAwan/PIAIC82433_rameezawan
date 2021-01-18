@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>JS chapter 21 to 30</h1>
+	<h2>Assignment PIAIC</h2>
+	<h3>Take input no., convert into greater no. Declear a var string,slice and print reverse </h3><br>
+	
+	<input type="number" id="quantity" >
+	<button onclick="convert()">submit</button>
+
+	<p id="main"></p>
+
+<script>
+	function convert()
+	{  
+		var newString;
+		var text;
+		var res;
+		var length;
+
+		var num1=parseFloat(document.getElementById("quantity").value);
+
+var num2=parseFloat(document.getElementById("quantity").innerHTML = Math.ceil(num1));
+
+alert("Rounded Number is = "+ num2);
+
+text = "This is my dummy text";
+
+alert("Dummy text is " +  "("+text+")");
+
+res = text.slice(0, num2);
+
+length= res.length;
+
+alert("Sliced string is " + "("+res+")");
+
+for(i=length; i >= 0; i--)
+	{
+     /*newString = newString + res[i];*/
+	 newString = newString + res.charAt(i);
+	  }
+	
+alert("Resversed String is"+"("+newString+")");
+
+}  
+</script>
+
+</body>
+</html>
